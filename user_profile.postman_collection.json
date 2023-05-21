@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "5a7d2477-bb5d-4fc2-8a75-c52cd939283e",
+		"name": "user_profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21255754"
+	},
+	"item": [
+		{
+			"name": "Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"devansh\",\n    \"password\":\"test@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/login/"
+			},
+			"response": [
+				{
+					"name": "Login API",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"devansh\",\n    \"password\":\"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/login/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 09:02:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "496"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": {\n        \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NTI2NDU0NCwiaWF0IjoxNjg0NjU5NzQ0LCJqdGkiOiJlZGEzZDMxZDE5NTg0Y2YzYjkwYzM2YzlmNDgxMDRlZSIsInVzZXJfaWQiOjEwfQ.FeFkUw2jxaVAEpbL_lDKki_D2I-wj-AYkF7a8YvklVU\",\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NzQ2MTQ0LCJpYXQiOjE2ODQ2NTk3NDQsImp0aSI6Ijg4MzhmZTU5NjBkMTRjNTBiZjQwZGM5ZDg3NGQwMzljIiwidXNlcl9pZCI6MTB9.ZgnWjStRfU9J27CrfT-dslE0A-pjBbNzqujUXZWvwIY\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "user_create API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_image",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "/home/plutusdev/Downloads/SampleJPGImage_5mbmb.jpg"
+						},
+						{
+							"key": "username",
+							"value": "jiji99",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test@123",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "test@123",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "sahil",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "patel",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@13gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "2022-05-23",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "emp",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "328932328",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/user_create"
+			},
+			"response": [
+				{
+					"name": "user_create API",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "profile_image",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/home/plutusdev/Downloads/SampleJPGImage_5mbmb.jpg"
+								},
+								{
+									"key": "username",
+									"value": "jiji99",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test@123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "test@123",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "sahil",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "patel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@13gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2022-05-23",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "emp",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "328932328",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/user_create"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 07:35:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "276"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 94,\n        \"email\": \"test@13gmail.com\",\n        \"username\": \"jiji99\",\n        \"first_name\": \"sahil\",\n        \"last_name\": \"patel\",\n        \"profile_image\": \"/Temp/Temp/SampleJPGImage_5mbmb_vauNemE.jpg\",\n        \"phone_number\": \"328932328\",\n        \"designation\": \"emp\",\n        \"date_of_birth\": \"2022-05-23\"\n    },\n    \"msg\": \"Registration Successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NzQ2MTQ0LCJpYXQiOjE2ODQ2NTk3NDQsImp0aSI6Ijg4MzhmZTU5NjBkMTRjNTBiZjQwZGM5ZDg3NGQwMzljIiwidXNlcl9pZCI6MTB9.ZgnWjStRfU9J27CrfT-dslE0A-pjBbNzqujUXZWvwIY"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone_number",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "designation",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "/home/plutusdev/Downloads/10mb2.jpeg"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/update_user/10"
+			},
+			"response": [
+				{
+					"name": "update API",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "designation",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/home/plutusdev/Downloads/10mb2.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/update_user/10"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 09:02:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, PUT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"test@12gmail.com\",\n    \"first_name\": \"devansh\",\n    \"last_name\": \"patel\",\n    \"phone_number\": \"2332323232\",\n    \"designation\": \"emp\",\n    \"profile_image\": \"/Temp/Temp/10mb2_m2AwV5X.jpeg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NzQ2MTQ0LCJpYXQiOjE2ODQ2NTk3NDQsImp0aSI6Ijg4MzhmZTU5NjBkMTRjNTBiZjQwZGM5ZDg3NGQwMzljIiwidXNlcl9pZCI6MTB9.ZgnWjStRfU9J27CrfT-dslE0A-pjBbNzqujUXZWvwIY"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/delete_user/11"
+			},
+			"response": [
+				{
+					"name": "delete API",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/delete_user/11"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 09:03:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "\"message : you have no access to delete another user like\""
+				}
+			]
+		}
+	]
+}
